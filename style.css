@@ -141,7 +141,7 @@ li {
 .descriptions {
     background-color: white;
     padding: 30px 0;
-    max-width: 420px;
+    max-width: 100%;
 }
 
 .descriptions-items {
@@ -149,7 +149,6 @@ li {
     grid-template-columns: repeat(4, 1fr);
     width: 420px;
     gap: 10px;
-    
 }
 
 .descriptions-items:hover {
