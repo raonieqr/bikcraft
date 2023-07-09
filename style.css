@@ -44,6 +44,8 @@ li {
     padding: 10px 20px;
     text-transform: uppercase;
     border-radius: 4px;
+    border: 2px solid white;
+
 }
 
 .link:hover {
@@ -68,7 +70,7 @@ li {
 
 .grid img {
     display: grid;
-    max-width: 420px;
+    max-width: 100%;
 }
 
 #line {
@@ -92,10 +94,10 @@ li {
     content: "";
     display: inline-block;
     background-color: #ee2211;
-    width: 40px;
+    width: 50px;
     height: 4px;
     position: absolute;
-    margin: -2rem 18.1rem;
+    margin: -2rem 17.8rem;
 }
 
 .grid h1 {
@@ -105,6 +107,7 @@ li {
 .grid p {
     font-size: 1rem;
     text-align: right;
+    max-width: 60ch;
 }
 
 .grid button {
@@ -160,7 +163,7 @@ li {
 }
 
 .descriptions img {
-    padding: 20px 0px;
+    padding: 15px 0px;
     width: 20px;
     height: 20px;
     grid-column: 1;
@@ -175,6 +178,7 @@ li {
 
 .descriptions h3 {
     margin-bottom: 5px;
+    font-size: 1rem;
 }
 
 .details p {
@@ -183,7 +187,7 @@ li {
 }
 
 footer {
-    position: fixed;
+    position: absolute;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -193,3 +197,24 @@ footer {
   }
   
 
+@media (width <= 900px) {
+    nav ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+    
+    .grid {
+        grid-template-columns: repeat(1, 1fr);
+               
+    }
+
+    .grid #about h1::before {
+        background-color: transparent;
+    }
+
+    footer {
+        position: relative;
+        top: 60px;
+    }
+}
